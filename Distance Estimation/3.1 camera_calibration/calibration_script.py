@@ -39,7 +39,9 @@ obj_points_3D = []  # 3d point in real world space
 img_points_2D = []  # 2d points in image plane
 
 # The images directory path
-image_dir_path = "images"
+image_dir_path = (
+    "C:/Users/91930/OpenCV/Distance Estimation/3.1 camera_calibration/images"
+)
 
 files = os.listdir(image_dir_path)  # list of names of all the files present
 for file in files:
