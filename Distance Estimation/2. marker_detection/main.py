@@ -21,7 +21,7 @@ while True:
     marker_corners, marker_IDs, reject = aruco.detectMarkers(
         gray_frame, marker_dict, parameters=param_markers
     )
-    # getting conrners of markers
+    # getting corners of markers
     if marker_corners:
         for ids, corners in zip(marker_IDs, marker_corners):
             cv.polylines(
@@ -43,7 +43,7 @@ while True:
                 2,
                 cv.LINE_AA,
             )
-            # print(ids, "  ", corners)
+            print(f"Detected marker ID: {ids[0]}")
     cv.imshow("frame", frame)
     key = cv.waitKey(1)
     if key == ord("q"):
